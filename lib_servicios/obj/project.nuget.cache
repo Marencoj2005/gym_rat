@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "eJlxQj6EhEA=",
+  "success": true,
+  "projectFilePath": "/home/juandotcom/RiderProjects/gim_rat/lib_servicios/lib_servicios.csproj",
+  "expectedPackageFiles": [
+    "/home/juandotcom/.nuget/packages/microsoft.aspnetcore.app.ref/9.0.8/microsoft.aspnetcore.app.ref.9.0.8.nupkg.sha512"
+  ],
+  "logs": []
+}

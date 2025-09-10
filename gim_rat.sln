@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. pruebas unitarias", "4. 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lib_nucleo", "lib_nucleo\lib_nucleo.csproj", "{27356B91-9814-465B-9E56-B0ED56872160}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lib_servicios", "lib_servicios\lib_servicios.csproj", "{1C51C18E-4497-44A2-A9D4-321E6D2A74A7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,11 +19,16 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{27356B91-9814-465B-9E56-B0ED56872160} = {39B3B395-323F-4B16-A513-848C8806A2EA}
+		{1C51C18E-4497-44A2-A9D4-321E6D2A74A7} = {01200889-A79E-4B8F-ACDA-5264B3C4ACAD}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{27356B91-9814-465B-9E56-B0ED56872160}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{27356B91-9814-465B-9E56-B0ED56872160}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27356B91-9814-465B-9E56-B0ED56872160}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27356B91-9814-465B-9E56-B0ED56872160}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C51C18E-4497-44A2-A9D4-321E6D2A74A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C51C18E-4497-44A2-A9D4-321E6D2A74A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C51C18E-4497-44A2-A9D4-321E6D2A74A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C51C18E-4497-44A2-A9D4-321E6D2A74A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
