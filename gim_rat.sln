@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. presentacion", "1. presentacion", "{146C5A90-3B8E-465A-A6B8-81F2CCE8D498}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. servicios", "2. servicios", "{01200889-A79E-4B8F-ACDA-5264B3C4ACAD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. nucleo", "3. nucleo", "{39B3B395-323F-4B16-A513-848C8806A2EA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. pruebas unitarias", "4. pruebas unitarias", "{BFED23CD-BF6C-4410-AA19-FFFA73001134}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lib_nucleo", "lib_nucleo\lib_nucleo.csproj", "{27356B91-9814-465B-9E56-B0ED56872160}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{27356B91-9814-465B-9E56-B0ED56872160} = {39B3B395-323F-4B16-A513-848C8806A2EA}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{27356B91-9814-465B-9E56-B0ED56872160}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27356B91-9814-465B-9E56-B0ED56872160}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27356B91-9814-465B-9E56-B0ED56872160}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27356B91-9814-465B-9E56-B0ED56872160}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
