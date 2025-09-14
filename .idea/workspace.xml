@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1781f57c-f616-4f95-ac75-6e4081de43d7" name="Changes" comment="Primer Commit">
-      <change beforePath="$PROJECT_DIR$/db_gym/Gymrat.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db_gym/Gymrat.sql" afterDir="false" />
-    </list>
+    <list default="true" id="1781f57c-f616-4f95-ac75-6e4081de43d7" name="Changes" comment="Create of the database" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,6 +61,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Primer Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Primer Commit" />
+    <MESSAGE value="Create of the database" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create of the database" />
   </component>
 </project>
