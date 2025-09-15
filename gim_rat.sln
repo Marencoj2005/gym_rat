@@ -8,9 +8,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. nucleo", "3. nucleo", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. pruebas unitarias", "4. pruebas unitarias", "{BFED23CD-BF6C-4410-AA19-FFFA73001134}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lib_nucleo", "lib_nucleo\lib_nucleo.csproj", "{27356B91-9814-465B-9E56-B0ED56872160}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gimrat_nucleo", "gimrat_nucleo\gimrat_nucleo.csproj", "{27356B91-9814-465B-9E56-B0ED56872160}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lib_servicios", "lib_servicios\lib_servicios.csproj", "{1C51C18E-4497-44A2-A9D4-321E6D2A74A7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gim_rat.servicios", "gim_rat.servicios\gim_rat.servicios.csproj", "{1C51C18E-4497-44A2-A9D4-321E6D2A74A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gim_rat.Tests", "gim_rat.Tests\gim_rat.Tests.csproj", "{27427E74-3A7F-4136-8F73-0E0AF9A9A774}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +22,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{27356B91-9814-465B-9E56-B0ED56872160} = {39B3B395-323F-4B16-A513-848C8806A2EA}
 		{1C51C18E-4497-44A2-A9D4-321E6D2A74A7} = {01200889-A79E-4B8F-ACDA-5264B3C4ACAD}
+		{27427E74-3A7F-4136-8F73-0E0AF9A9A774} = {BFED23CD-BF6C-4410-AA19-FFFA73001134}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{27356B91-9814-465B-9E56-B0ED56872160}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -30,5 +33,9 @@ Global
 		{1C51C18E-4497-44A2-A9D4-321E6D2A74A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C51C18E-4497-44A2-A9D4-321E6D2A74A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C51C18E-4497-44A2-A9D4-321E6D2A74A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27427E74-3A7F-4136-8F73-0E0AF9A9A774}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27427E74-3A7F-4136-8F73-0E0AF9A9A774}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27427E74-3A7F-4136-8F73-0E0AF9A9A774}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27427E74-3A7F-4136-8F73-0E0AF9A9A774}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
