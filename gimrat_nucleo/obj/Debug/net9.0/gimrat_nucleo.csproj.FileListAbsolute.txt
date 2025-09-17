@@ -1,0 +1,13 @@
+C:\Users\santi\source\repos\Marencoj2005\gym_rat\gimrat_nucleo\bin\Debug\net9.0\gimrat_nucleo.deps.json
+C:\Users\santi\source\repos\Marencoj2005\gym_rat\gimrat_nucleo\bin\Debug\net9.0\gimrat_nucleo.dll
+C:\Users\santi\source\repos\Marencoj2005\gym_rat\gimrat_nucleo\bin\Debug\net9.0\gimrat_nucleo.pdb
+C:\Users\santi\source\repos\Marencoj2005\gym_rat\gimrat_nucleo\obj\Debug\net9.0\gimrat_nucleo.csproj.AssemblyReference.cache
+C:\Users\santi\source\repos\Marencoj2005\gym_rat\gimrat_nucleo\obj\Debug\net9.0\gimrat_nucleo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\santi\source\repos\Marencoj2005\gym_rat\gimrat_nucleo\obj\Debug\net9.0\gimrat_nucleo.AssemblyInfoInputs.cache
+C:\Users\santi\source\repos\Marencoj2005\gym_rat\gimrat_nucleo\obj\Debug\net9.0\gimrat_nucleo.AssemblyInfo.cs
+C:\Users\santi\source\repos\Marencoj2005\gym_rat\gimrat_nucleo\obj\Debug\net9.0\gimrat_nucleo.csproj.CoreCompileInputs.cache
+C:\Users\santi\source\repos\Marencoj2005\gym_rat\gimrat_nucleo\obj\Debug\net9.0\gimrat_nucleo.sourcelink.json
+C:\Users\santi\source\repos\Marencoj2005\gym_rat\gimrat_nucleo\obj\Debug\net9.0\gimrat_nucleo.dll
+C:\Users\santi\source\repos\Marencoj2005\gym_rat\gimrat_nucleo\obj\Debug\net9.0\refint\gimrat_nucleo.dll
+C:\Users\santi\source\repos\Marencoj2005\gym_rat\gimrat_nucleo\obj\Debug\net9.0\gimrat_nucleo.pdb
+C:\Users\santi\source\repos\Marencoj2005\gym_rat\gimrat_nucleo\obj\Debug\net9.0\ref\gimrat_nucleo.dll
