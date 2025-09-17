@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("gimrat_nucleo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3100419632f4e18888f9ddc99e6ffe32fb024ffd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+02cbb5b299ad3431215c263cf050073da4801184")]
 [assembly: System.Reflection.AssemblyProductAttribute("gimrat_nucleo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("gimrat_nucleo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
