@@ -1,0 +1,13 @@
+C:\Users\santi\source\repos\Marencoj2005\gym_rat\lib__dominio\bin\Debug\net8.0\lib__dominio.deps.json
+C:\Users\santi\source\repos\Marencoj2005\gym_rat\lib__dominio\bin\Debug\net8.0\lib__dominio.dll
+C:\Users\santi\source\repos\Marencoj2005\gym_rat\lib__dominio\bin\Debug\net8.0\lib__dominio.pdb
+C:\Users\santi\source\repos\Marencoj2005\gym_rat\lib__dominio\obj\Debug\net8.0\lib__dominio.csproj.AssemblyReference.cache
+C:\Users\santi\source\repos\Marencoj2005\gym_rat\lib__dominio\obj\Debug\net8.0\lib__dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\santi\source\repos\Marencoj2005\gym_rat\lib__dominio\obj\Debug\net8.0\lib__dominio.AssemblyInfoInputs.cache
+C:\Users\santi\source\repos\Marencoj2005\gym_rat\lib__dominio\obj\Debug\net8.0\lib__dominio.AssemblyInfo.cs
+C:\Users\santi\source\repos\Marencoj2005\gym_rat\lib__dominio\obj\Debug\net8.0\lib__dominio.csproj.CoreCompileInputs.cache
+C:\Users\santi\source\repos\Marencoj2005\gym_rat\lib__dominio\obj\Debug\net8.0\lib__dominio.sourcelink.json
+C:\Users\santi\source\repos\Marencoj2005\gym_rat\lib__dominio\obj\Debug\net8.0\lib__dominio.dll
+C:\Users\santi\source\repos\Marencoj2005\gym_rat\lib__dominio\obj\Debug\net8.0\refint\lib__dominio.dll
+C:\Users\santi\source\repos\Marencoj2005\gym_rat\lib__dominio\obj\Debug\net8.0\lib__dominio.pdb
+C:\Users\santi\source\repos\Marencoj2005\gym_rat\lib__dominio\obj\Debug\net8.0\ref\lib__dominio.dll

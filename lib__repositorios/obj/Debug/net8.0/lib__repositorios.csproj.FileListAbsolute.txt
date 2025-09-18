@@ -1,0 +1,12 @@
+C:\Users\santi\source\repos\Marencoj2005\gym_rat\lib__repositorios\bin\Debug\net8.0\lib__repositorios.deps.json
+C:\Users\santi\source\repos\Marencoj2005\gym_rat\lib__repositorios\bin\Debug\net8.0\lib__repositorios.dll
+C:\Users\santi\source\repos\Marencoj2005\gym_rat\lib__repositorios\bin\Debug\net8.0\lib__repositorios.pdb
+C:\Users\santi\source\repos\Marencoj2005\gym_rat\lib__repositorios\obj\Debug\net8.0\lib__repositorios.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\santi\source\repos\Marencoj2005\gym_rat\lib__repositorios\obj\Debug\net8.0\lib__repositorios.AssemblyInfoInputs.cache
+C:\Users\santi\source\repos\Marencoj2005\gym_rat\lib__repositorios\obj\Debug\net8.0\lib__repositorios.AssemblyInfo.cs
+C:\Users\santi\source\repos\Marencoj2005\gym_rat\lib__repositorios\obj\Debug\net8.0\lib__repositorios.csproj.CoreCompileInputs.cache
+C:\Users\santi\source\repos\Marencoj2005\gym_rat\lib__repositorios\obj\Debug\net8.0\lib__repositorios.sourcelink.json
+C:\Users\santi\source\repos\Marencoj2005\gym_rat\lib__repositorios\obj\Debug\net8.0\lib__repositorios.dll
+C:\Users\santi\source\repos\Marencoj2005\gym_rat\lib__repositorios\obj\Debug\net8.0\refint\lib__repositorios.dll
+C:\Users\santi\source\repos\Marencoj2005\gym_rat\lib__repositorios\obj\Debug\net8.0\lib__repositorios.pdb
+C:\Users\santi\source\repos\Marencoj2005\gym_rat\lib__repositorios\obj\Debug\net8.0\ref\lib__repositorios.dll

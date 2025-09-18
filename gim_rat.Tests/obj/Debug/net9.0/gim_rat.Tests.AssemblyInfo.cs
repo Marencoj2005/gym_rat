@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("gim_rat.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+02cbb5b299ad3431215c263cf050073da4801184")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d53aa35c8a3e27f0bd6a21fd9c5643467d3797c0")]
 [assembly: System.Reflection.AssemblyProductAttribute("gim_rat.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("gim_rat.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
