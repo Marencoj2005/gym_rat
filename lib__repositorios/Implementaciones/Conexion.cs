@@ -2,18 +2,28 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using lib__dominio.Entidades;
+
 namespace lib__repositorios.Implementaciones
 {
     public partial class Conexion : DbContext, IConexion
     {
         public string? StringConexion { get; set; }
 
+        // Constructor que acepta DbContextOptions<Conexion>
+        public Conexion(DbContextOptions<Conexion> options) : base(options) { }
+
+        // Este método OnConfiguring solo se ejecuta si no se pasa una configuración de DbContextOptions
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(this.StringConexion!);
-            optionsBuilder.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
+            // Si las opciones no están configuradas, se configura para usar SQL Server
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseSqlServer(this.StringConexion!);  // Usar la cadena de conexión
+                optionsBuilder.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking); // Configurar el seguimiento de las consultas
+            }
         }
 
+        // Definición de las entidades
         public DbSet<Cliente>? Clientes { get; set; }
         public DbSet<Clase>? Clases { get; set; }
         public DbSet<Coach>? Coachs { get; set; }
@@ -29,6 +39,7 @@ namespace lib__repositorios.Implementaciones
         public DbSet<Pago>? Pagos { get; set; }
         public DbSet<UsuarioLogin>? UsuariosLogin { get; set; }
 
+        // Método para acceder a las entradas de las entidades
         public EntityEntry<T> Entry<T>(T entity) where T : class => base.Entry(entity);
     }
 }

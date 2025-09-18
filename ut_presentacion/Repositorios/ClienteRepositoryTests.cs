@@ -11,9 +11,9 @@ namespace lib__repositorios.Tests
     {
         private readonly IConexion _conexion;
 
+        // Constructor para configurar la base de datos en memoria para pruebas
         public ClienteRepositoryTests()
         {
-            // Configurar la base de datos en memoria para pruebas.
             var options = new DbContextOptionsBuilder<Conexion>()
                 .UseInMemoryDatabase("TestDb")  // Nombre de la base de datos en memoria
                 .Options;
