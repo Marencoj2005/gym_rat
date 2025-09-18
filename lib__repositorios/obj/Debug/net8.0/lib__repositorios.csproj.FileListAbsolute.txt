@@ -10,3 +10,4 @@ C:\Users\santi\source\repos\Marencoj2005\gym_rat\lib__repositorios\obj\Debug\net
 C:\Users\santi\source\repos\Marencoj2005\gym_rat\lib__repositorios\obj\Debug\net8.0\refint\lib__repositorios.dll
 C:\Users\santi\source\repos\Marencoj2005\gym_rat\lib__repositorios\obj\Debug\net8.0\lib__repositorios.pdb
 C:\Users\santi\source\repos\Marencoj2005\gym_rat\lib__repositorios\obj\Debug\net8.0\ref\lib__repositorios.dll
+C:\Users\santi\source\repos\Marencoj2005\gym_rat\lib__repositorios\obj\Debug\net8.0\lib__repositorios.csproj.AssemblyReference.cache

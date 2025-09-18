@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace lib__dominio.Entidades
+﻿namespace lib__dominio.Entidades
 {
     internal class Asignado
     {
@@ -15,3 +9,4 @@ namespace lib__dominio.Entidades
         public Clase Clase { get; set; }
     }
 }
+// Compare this snippet from lib__dominio/Entidades/Coach.cs:

@@ -18,3 +18,4 @@ namespace lib__dominio.Entidades
         public Clase Clase { get; set; }
     }
 }
+// Compare this snippet from lib__dominio/Entidades/Plan.cs:

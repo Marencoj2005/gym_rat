@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace lib__dominio.Entidades
 {
-    internal class Plan
+    public class Plan
     {
         public int Nit { get; set; }
         public string Nombre { get; set; }
-        public string TipoPlan { get; set; }
+        public string TipoPlan { get; set; } // VIP, Basico, Incluido
         public bool Indefinido { get; set; }
         public decimal Precio { get; set; }
 

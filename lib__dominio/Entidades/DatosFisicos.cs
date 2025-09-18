@@ -1,6 +1,8 @@
-﻿namespace lib__dominio.Entidades
+﻿using System;
+
+namespace lib__dominio.Entidades
 {
-    internal class DatosFisicos
+    public class DatosFisicos
     {
         public int Id { get; set; }
         public int CedulaCliente { get; set; }
@@ -14,6 +16,5 @@
         public decimal Agua { get; set; }
 
         public Cliente Cliente { get; set; }
-
     }
 }

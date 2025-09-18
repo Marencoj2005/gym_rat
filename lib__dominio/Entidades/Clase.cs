@@ -16,6 +16,7 @@ namespace lib__dominio.Entidades
 
         public Sede Sede { get; set; }
         public ICollection<Asignado> Asignaciones { get; set; }
+        public ICollection<Reserva> Reservas { get; set; }
         public ICollection<Asistencia> Asistencias { get; set; }
         public ICollection<Reserva> Reservas { get; set; }
         public ICollection<Feedback> Feedbacks { get; set; }
