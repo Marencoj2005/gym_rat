@@ -18,4 +18,17 @@
         <Using Include="Xunit"/>
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Entidades" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\lib__dominio\lib__dominio.csproj" />
+      <ProjectReference Include="..\lib__repositorios\lib__repositorios.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Moq" Version="4.20.70" />
+    </ItemGroup>
+
 </Project>
