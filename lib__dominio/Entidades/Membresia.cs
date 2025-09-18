@@ -13,7 +13,7 @@ namespace lib__dominio.Entidades
         public int NitPlan { get; set; }
         public DateTime FechaInicio { get; set; }
         public DateTime? FechaFin { get; set; }
-        public string Estado { get; set; } // Activa, Vencida, Cancelada
+        public String? Estado { get; set; } // Activa, Vencida, Cancelada
 
         public Cliente Cliente { get; set; }
         public Plan Plan { get; set; }

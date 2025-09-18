@@ -5,9 +5,9 @@ namespace lib__dominio.Entidades
     public class Coach
     {
         public int Cedula { get; set; }
-        public string Nombre { get; set; }
-        public string Especialidad { get; set; }
-        public string HorarioTrabajo { get; set; }
+        public String? Nombre { get; set; }
+        public String? Especialidad { get; set; }
+        public String? HorarioTrabajo { get; set; }
 
         public ICollection<Asignado> Asignaciones { get; set; }
     }

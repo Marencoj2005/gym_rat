@@ -10,9 +10,9 @@ namespace lib__dominio.Entidades
     {
         public int IdUsuario { get; set; }
         public int CedulaCliente { get; set; }
-        public string Email { get; set; }
-        public string PasswordHash { get; set; }
-        public string Rol { get; set; } // Cliente, Empleado, Admin
+        public String? Email { get; set; }
+        public String? PasswordHash { get; set; }
+        public String? Rol { get; set; } // Cliente, Empleado, Admin
 
         public Cliente Cliente { get; set; }
 

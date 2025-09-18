@@ -9,7 +9,7 @@ namespace lib__dominio.Entidades
     public class Clase
     {
         public int IdClase { get; set; }
-        public string NombreClase { get; set; }
+        public String? NombreClase { get; set; }
         public TimeSpan Horario { get; set; }
         public int CupoMaximo { get; set; }
         public int SedeId { get; set; }

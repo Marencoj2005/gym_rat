@@ -5,9 +5,9 @@ namespace lib__dominio.Entidades
     public class Cliente
     {
         public int Cedula { get; set; }
-        public string Nombre { get; set; }
-        public string Email { get; set; }
-        public string TipoUsuario { get; set; }
+        public String? Nombre { get; set; }
+        public String? Email { get; set; }
+        public String? TipoUsuario { get; set; }
         public bool Activo { get; set; }
 
         public ICollection<Membresia> Membresias { get; set; }

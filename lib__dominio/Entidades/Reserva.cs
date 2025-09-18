@@ -12,7 +12,7 @@ namespace lib__dominio.Entidades
         public int CedulaCliente { get; set; }
         public int IdClase { get; set; }
         public DateTime FechaReserva { get; set; }
-        public string Estado { get; set; }
+        public String? Estado { get; set; }
 
         public Cliente Cliente { get; set; }
         public Clase Clase { get; set; }
