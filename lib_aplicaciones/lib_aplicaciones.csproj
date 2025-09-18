@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
+    <Folder Include="Implementaciones\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\gim_rat.Tests\gim_rat.Tests.csproj" />
+    <ProjectReference Include="..\lib__dominio\lib__dominio.csproj" />
+    <ProjectReference Include="..\lib__repositorios\lib__repositorios.csproj" />
+  </ItemGroup>
+
+</Project>
