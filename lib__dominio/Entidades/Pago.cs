@@ -1,6 +1,6 @@
 ﻿namespace lib__dominio.Entidades
 {
-    internal class Pago
+    public class Pago
     {
         public int IdPago { get; set; }
         public int CedulaCliente { get; set; }

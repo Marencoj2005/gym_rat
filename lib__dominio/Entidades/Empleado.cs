@@ -1,6 +1,6 @@
 ﻿namespace lib__dominio.Entidades
 {
-    internal class Empleado
+    public class Empleado
     {
         public int Cedula { get; set; }
         public string Nombre { get; set; }

@@ -1,7 +1,7 @@
 ﻿using lib__repositorios.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
-
+using lib__dominio.Entidades;
 namespace lib__repositorios.Implementaciones
 {
     public partial class Conexion : DbContext, IConexion

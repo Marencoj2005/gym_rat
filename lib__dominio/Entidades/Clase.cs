@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace lib__dominio.Entidades
 {
-    internal class Clase
+    public class Clase
     {
         public int IdClase { get; set; }
         public string NombreClase { get; set; }
@@ -16,7 +16,7 @@ namespace lib__dominio.Entidades
 
         public Sede Sede { get; set; }
         public ICollection<Asignado> Asignaciones { get; set; }
-        public ICollection<Reserva> Reservas { get; set; }
+       // public ICollection<Reserva> Reservas { get; set; }
         public ICollection<Asistencia> Asistencias { get; set; }
         public ICollection<Reserva> Reservas { get; set; }
         public ICollection<Feedback> Feedbacks { get; set; }

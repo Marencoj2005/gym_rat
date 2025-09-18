@@ -1,6 +1,6 @@
 ﻿namespace lib__dominio.Entidades
 {
-    internal class HistorialFisico
+    public class HistorialFisico
     {
         public int IdHistorial { get; set; }
         public int CedulaCliente { get; set; }

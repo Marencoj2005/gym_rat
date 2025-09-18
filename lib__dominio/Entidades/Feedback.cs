@@ -1,6 +1,6 @@
 ﻿namespace lib__dominio.Entidades
 {
-    internal class Feedback
+    public class Feedback
     {
         public int IdFeedback { get; set; }
         public int CedulaCliente { get; set; }

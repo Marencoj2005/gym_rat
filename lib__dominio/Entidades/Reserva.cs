@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace lib__dominio.Entidades
 {
-    internal class Reserva
+    public class Reserva
     {
         public int IdReserva { get; set; }
         public int CedulaCliente { get; set; }

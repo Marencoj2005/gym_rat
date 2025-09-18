@@ -2,7 +2,7 @@
 
 namespace lib__dominio.Entidades
 {
-    internal class Cliente
+    public class Cliente
     {
         public int Cedula { get; set; }
         public string Nombre { get; set; }
@@ -11,7 +11,7 @@ namespace lib__dominio.Entidades
         public bool Activo { get; set; }
 
         public ICollection<Membresia> Membresias { get; set; }
-        public ICollection<Reserva> Reservas { get; set; }
+       // public ICollection<Reserva> Reservas { get; set; }
         public ICollection<Asistencia> Asistencias { get; set; }
         public ICollection<Reserva> Reservas { get; set; }
         public ICollection<Feedback> Feedbacks { get; set; }

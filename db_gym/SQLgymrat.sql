@@ -12,7 +12,7 @@ CREATE TABLE Clientes (
     Activo BIT DEFAULT 1
 );
 
--- Tabla de Datos Físicos
+-- Tabla de Datos FÃ­sicos
 CREATE TABLE DatosFisicos (
     Id INT IDENTITY(1,1) PRIMARY KEY,
     CedulaCliente INT NOT NULL,
@@ -36,7 +36,7 @@ CREATE TABLE Planes (
     Precio DECIMAL(10,2)
 );
 
--- Tabla de Membresías
+-- Tabla de MembresÃ­as
 CREATE TABLE Membresias (
     IdMembresia INT IDENTITY(1,1) PRIMARY KEY,
     CedulaCliente INT NOT NULL,
@@ -73,7 +73,7 @@ CREATE TABLE Coach (
     HorarioTrabajo NVARCHAR(50)
 );
 
--- Tabla de Asignación Coach–Clase
+-- Tabla de AsignaciÃ³n Coachâ€“Clase
 CREATE TABLE Asignado (
     CedulaCoach INT NOT NULL,
     IdClase INT NOT NULL,
@@ -145,7 +145,7 @@ CREATE TABLE Feedback (
     FOREIGN KEY (IdClase) REFERENCES Clases(IdClase)
 );
 
--- Tabla de Historial Físico
+-- Tabla de Historial FÃ­sico
 CREATE TABLE HistorialFisico (
     IdHistorial INT IDENTITY(1,1) PRIMARY KEY,
     CedulaCliente INT NOT NULL,

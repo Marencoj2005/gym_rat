@@ -1,6 +1,6 @@
 ﻿namespace lib__dominio.Entidades
 {
-    internal class Asignado
+    public class Asignado
     {
         public int CedulaCoach { get; set; }
         public int IdClase { get; set; }

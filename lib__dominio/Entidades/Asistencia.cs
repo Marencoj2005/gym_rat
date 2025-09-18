@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace lib__dominio.Entidades
 {
-    internal class Asistencia
+    public class Asistencia
     {
         public int IdAsistencia { get; set; }
         public int CedulaCliente { get; set; }
