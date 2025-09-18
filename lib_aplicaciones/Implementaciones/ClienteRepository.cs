@@ -3,7 +3,7 @@ using lib__repositorios.Interfaces;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace lib__repositorios.Implementaciones
+namespace gim_rat.Tests.Repositorios
 {
     public class ClienteRepository : IClienteRepository
     {

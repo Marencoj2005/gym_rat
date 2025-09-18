@@ -1,14 +1,19 @@
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using lib__dominio.Entidades;
 using gim_rat.Tests.Nucleo;
 using lib__repositorios.Interfaces;
 using lib__repositorios.Implementaciones;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Identity.Client;
+
 namespace gim_rat.Tests.Entidades
 {
     [TestClass]
     public class ClienteTests
     {
+        private IConexion _conexion;
+
+        [TestMethod]
         public void Cliente_Properties_CanBeSetAndGet()
         {
             // Arrange
@@ -28,59 +33,101 @@ namespace gim_rat.Tests.Entidades
             cliente1.Email = email;
             cliente2.Email = email;
             cliente1.TipoUsuario = tipoUsuario;
-            cliente2.TipoUsuario= tipoUsuario;
+            cliente2.TipoUsuario = tipoUsuario;
             cliente1.Activo = activo;
             cliente2.Activo = activo;
 
+            // Guardar los clientes en la base de datos en memoria
+            _conexion.Clientes.Add(cliente1);
+            _conexion.Clientes.Add(cliente2);
+            _conexion.SaveChanges();
+
             // Assert
+            var clienteGuardado1 = _conexion.Clientes.FirstOrDefault(c => c.Cedula == cedula);
+            var clienteGuardado2 = _conexion.Clientes.FirstOrDefault(c => c.Cedula == cedula);
 
-            [TestMethod]
-            public void Ejecutar()
-            {
-                Assert.AreEqual(cedula, cliente1.Cedula);
-                Assert.AreEqual(cedula, cliente2.Cedula);
-                Assert.AreEqual(nombre, cliente1.Nombre);
-                Assert.AreEqual(nombre, cliente2.Nombre);
-                Assert.AreEqual(email, cliente1.Email);
-                Assert.AreEqual(email, cliente2.Email);
-                Assert.AreEqual(tipoUsuario, cliente1.TipoUsuario);
-                Assert.AreEqual(tipoUsuario, cliente2.TipoUsuario);
-                Assert.AreEqual(activo, cliente1.Activo);
-                Assert.AreEqual(activo, cliente2.Activo);
-            }
-            public bool Listar()
-        {
-            this.lista = this.iConexion!.Notas!.ToList();
-            return lista.Count > 0;
+            Assert.IsNotNull(clienteGuardado1);
+            Assert.AreEqual(cedula, clienteGuardado1.Cedula);
+            Assert.AreEqual(nombre, clienteGuardado1.Nombre);
+            Assert.AreEqual(email, clienteGuardado1.Email);
+            Assert.AreEqual(tipoUsuario, clienteGuardado1.TipoUsuario);
+            Assert.AreEqual(activo, clienteGuardado1.Activo);
+
+            Assert.IsNotNull(clienteGuardado2);
+            Assert.AreEqual(cedula, clienteGuardado2.Cedula);
+            Assert.AreEqual(nombre, clienteGuardado2.Nombre);
+            Assert.AreEqual(email, clienteGuardado2.Email);
+            Assert.AreEqual(tipoUsuario, clienteGuardado2.TipoUsuario);
+            Assert.AreEqual(activo, clienteGuardado2.Activo);
         }
-        public bool Guardar()
+
+        [TestMethod]
+        public void Listar_Clientes()
         {
-            this.entidad = EntidadesNucleo.Notas()!;
-            this.iConexion!.Notas!.Add(this.entidad);
-            this.iConexion!.SaveChanges();
-            return true;
+            // Arrange: Añadir un cliente a la base de datos
+            var cliente = new Cliente { Cedula = 12345, Nombre = "Juan Perez" };
+            _conexion.Clientes.Add(cliente);
+            _conexion.SaveChanges();
+
+            // Act: Listar los clientes
+            var lista = _conexion.Clientes.ToList();
+
+            // Assert: Verificar que hay al menos un cliente
+            Assert.IsTrue(lista.Count > 0);
         }
-        public bool Modificar()
+
+        [TestMethod]
+        public void Guardar_Cliente()
         {
-            this.entidad!.NotaFinal =
-            (this.entidad.Nota1 +
-            this.entidad.Nota2 +
-            this.entidad.Nota3 +
-            this.entidad.Nota4 +
-            this.entidad.Nota5) / 5;
-            var entry = this.iConexion!.Entry<Notas>(this.entidad);
+            // Arrange: Crear un cliente nuevo
+            var cliente = new Cliente { Cedula = 67890, Nombre = "Maria Lopez" };
+
+            // Act: Guardar el cliente en la base de datos
+            _conexion.Clientes.Add(cliente);
+            _conexion.SaveChanges();
+
+            // Assert: Verificar que el cliente se guardó correctamente
+            var clienteGuardado = _conexion.Clientes.FirstOrDefault(c => c.Cedula == 67890);
+            Assert.IsNotNull(clienteGuardado);
+            Assert.AreEqual("Maria Lopez", clienteGuardado.Nombre);
+        }
+
+        [TestMethod]
+        public void Modificar_Cliente()
+        {
+            // Arrange: Crear un cliente y guardarlo
+            var cliente = new Cliente { Cedula = 67890, Nombre = "Carlos Garcia" };
+            _conexion.Clientes.Add(cliente);
+            _conexion.SaveChanges();
+
+            // Act: Modificar el cliente
+            cliente.Nombre = "Carlos Fernandez";
+            var entry = _conexion.Entry(cliente);
             entry.State = EntityState.Modified;
-            this.iConexion!.SaveChanges();
-            return true;
-        }
-        public bool Borrar()
-        {
-            this.iConexion!.Notas!.Remove(this.entidad!);
-            this.iConexion!.SaveChanges();
-            return true;
+            _conexion.SaveChanges();
+
+            // Assert: Verificar que el nombre se actualizó
+            var clienteModificado = _conexion.Clientes.FirstOrDefault(c => c.Cedula == 67890);
+            Assert.IsNotNull(clienteModificado);
+            Assert.AreEqual("Carlos Fernandez", clienteModificado.Nombre);
         }
 
+        [TestMethod]
+        public void Borrar_Cliente()
+        {
+            // Arrange: Crear un cliente y guardarlo
+            var cliente = new Cliente { Cedula = 67890, Nombre = "Ana Sanchez" };
+            _conexion.Clientes.Add(cliente);
+            _conexion.SaveChanges();
+
+            // Act: Borrar el cliente
+            _conexion.Clientes.Remove(cliente);
+            _conexion.SaveChanges();
+
+            // Assert: Verificar que el cliente fue borrado
+            var clienteBorrado = _conexion.Clientes.FirstOrDefault(c => c.Cedula == 67890);
+            Assert.IsNull(clienteBorrado);
+        }
     }
 
-}
 }

@@ -11,8 +11,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. nucleo", "3. nucleo", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. pruebas unitarias", "4. pruebas unitarias", "{BFED23CD-BF6C-4410-AA19-FFFA73001134}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gim_rat.Tests", "gim_rat.Tests\gim_rat.Tests.csproj", "{27427E74-3A7F-4136-8F73-0E0AF9A9A774}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lib__dominio", "lib__dominio\lib__dominio.csproj", "{86A570C0-1CF1-47EB-B679-BEC58A7E6E0E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lib__repositorios", "lib__repositorios\lib__repositorios.csproj", "{DCA36BD3-4F93-427C-A1F5-436950758D14}"
@@ -32,10 +30,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{27427E74-3A7F-4136-8F73-0E0AF9A9A774}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{27427E74-3A7F-4136-8F73-0E0AF9A9A774}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{27427E74-3A7F-4136-8F73-0E0AF9A9A774}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{27427E74-3A7F-4136-8F73-0E0AF9A9A774}.Release|Any CPU.Build.0 = Release|Any CPU
 		{86A570C0-1CF1-47EB-B679-BEC58A7E6E0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{86A570C0-1CF1-47EB-B679-BEC58A7E6E0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86A570C0-1CF1-47EB-B679-BEC58A7E6E0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -57,7 +51,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{27427E74-3A7F-4136-8F73-0E0AF9A9A774} = {BFED23CD-BF6C-4410-AA19-FFFA73001134}
 		{86A570C0-1CF1-47EB-B679-BEC58A7E6E0E} = {39B3B395-323F-4B16-A513-848C8806A2EA}
 		{DCA36BD3-4F93-427C-A1F5-436950758D14} = {01200889-A79E-4B8F-ACDA-5264B3C4ACAD}
 		{6DE5EA5C-449C-4E60-AA0D-C0D74728BC0B} = {01200889-A79E-4B8F-ACDA-5264B3C4ACAD}
