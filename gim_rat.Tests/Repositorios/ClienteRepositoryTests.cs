@@ -19,10 +19,11 @@ namespace gim_rat.Tests.Repositorios
             mockConexion.Setup(c => c.Clientes).Returns(mockDbSet.Object);
 
             var repository = new ClienteRepository(mockConexion.Object);
-            var cliente = new Cliente { Cedula = 1, Nombre = "Test Cliente", Email = "test@example.com" };
-
+            var cliente1 = new Cliente { Cedula = 1, Nombre = "Test Cliente1", Email = "test1@example.com" };
+            //var cliente2 = new Cliente { Cedula = 2, Nombre = "Test Cliente2", Email = "test2@example.com" };
             // Act
-            repository.Add(cliente);
+            repository.Add(cliente1);
+            //repository.Add(cliente2);
 
             // Assert
             mockDbSet.Verify(m => m.Add(It.IsAny<Cliente>()), Times.Once);
