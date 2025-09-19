@@ -39,6 +39,28 @@ namespace lib__repositorios.Implementaciones
         public DbSet<Pago>? Pagos { get; set; }
         public DbSet<UsuarioLogin>? UsuariosLogin { get; set; }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Cliente>()
+                .HasOne(c => c.UsuarioLogin)
+                .WithOne(ul => ul.Cliente)
+                .HasForeignKey<UsuarioLogin>(ul => ul.CedulaCliente);
+
+            modelBuilder.Entity<Asignado>()
+                .HasKey(a => new { a.CedulaCoach, a.IdClase });
+
+            modelBuilder.Entity<Asistencia>()
+                .HasKey(a => a.IdAsistencia);
+
+            modelBuilder.Entity<Clase>()
+                .HasKey(c => c.IdClase);
+
+            modelBuilder.Entity<Cliente>()
+                .HasKey(c => c.Cedula);
+
+            base.OnModelCreating(modelBuilder);
+        }
+
         // Método para acceder a las entradas de las entidades
         public EntityEntry<T> Entry<T>(T entity) where T : class => base.Entry(entity);
     }

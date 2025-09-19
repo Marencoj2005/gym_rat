@@ -1,8 +1,9 @@
 using lib__dominio.Entidades;
 using lib__repositorios.Interfaces;
-using System.Collections.Generic;
-using System.Linq; 
-namespace gim_rat.Tests.Repositorios
+using lib_aplicaciones.Implementaciones;
+using lib_aplicaciones.Interfaces;
+
+namespace lib_aplicaciones.Implementaciones
 {
     public class ClienteRepository : IClienteRepository
     {

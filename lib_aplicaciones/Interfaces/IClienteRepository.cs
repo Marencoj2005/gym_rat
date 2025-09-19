@@ -1,6 +1,6 @@
 using lib__dominio.Entidades;
 
-namespace lib__repositorios.Interfaces
+namespace lib_aplicaciones.Interfaces
 {
     public interface IClienteRepository
     {

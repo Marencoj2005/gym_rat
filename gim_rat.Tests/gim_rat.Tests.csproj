@@ -20,9 +20,9 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\lib__dominio\lib__dominio.csproj" />
-      <ProjectReference Include="..\lib__repositorios\lib__repositorios.csproj" />
-      <ProjectReference Include="..\lib_aplicaciones\lib_aplicaciones.csproj" />
-    </ItemGroup>
+      <ProjectReference Include="../lib__dominio/lib__dominio.csproj" />
+          <ProjectReference Include="../lib__repositorios/lib__repositorios.csproj" />
+    <ProjectReference Include="../lib_aplicaciones/lib_aplicaciones.csproj" />
+  </ItemGroup>
 
 </Project>

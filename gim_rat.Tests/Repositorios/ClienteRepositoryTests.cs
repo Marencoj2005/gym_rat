@@ -2,6 +2,7 @@ using Xunit;
 using Moq;
 using lib__dominio.Entidades;
 using lib__repositorios.Interfaces;
+using lib_aplicaciones;
 using lib_aplicaciones.Implementaciones;
 using Microsoft.EntityFrameworkCore;
 
