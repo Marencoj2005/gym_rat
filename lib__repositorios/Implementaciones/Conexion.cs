@@ -5,7 +5,7 @@ using lib__dominio.Entidades;
 
 namespace lib__repositorios.Implementaciones
 {
-    public partial class Conexion : DbContext, IConexion
+    public class Conexion : DbContext, IConexion
     {
         public string? StringConexion { get; set; }
 
@@ -26,6 +26,7 @@ namespace lib__repositorios.Implementaciones
         // Definición de las entidades
         public DbSet<Cliente>? Clientes { get; set; }
         public DbSet<Clase>? Clases { get; set; }
+        public DbSet<Coach>? Coaches { get; set; }
         public DbSet<Coach>? Coachs { get; set; }
         public DbSet<Membresia>? Membresias { get; set; }
         public DbSet<Plan>? Planes { get; set; }

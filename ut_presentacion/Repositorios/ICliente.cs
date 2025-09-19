@@ -1,4 +1,4 @@
-﻿using gim_rat.Tests.Repositorios;
+﻿using lib_aplicaciones.Implementaciones;
 using lib__dominio.Entidades;
 using lib__repositorios.Implementaciones;
 using lib__repositorios.Interfaces;
