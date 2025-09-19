@@ -10,7 +10,7 @@ namespace lib__repositorios.Interfaces
 
         DbSet<Cliente>? Clientes { get; set; }
         DbSet<Clase>? Clases { get; set; }
-        DbSet<Coach>? Coachs { get; set; }
+        DbSet<Coach>? Coaches { get; set; }
         DbSet<Membresia>? Membresias { get; set; }
         DbSet<Plan>? Planes { get; set; }
         DbSet<Reserva>? Reservas { get; set; }

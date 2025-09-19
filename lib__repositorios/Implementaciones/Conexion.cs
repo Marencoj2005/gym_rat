@@ -9,24 +9,111 @@ namespace lib__repositorios.Implementaciones
     {
         public string? StringConexion { get; set; }
 
-        // Constructor que acepta DbContextOptions<Conexion>
         public Conexion(DbContextOptions<Conexion> options) : base(options) { }
 
-        // Este método OnConfiguring solo se ejecuta si no se pasa una configuración de DbContextOptions
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            // Si las opciones no están configuradas, se configura para usar SQL Server
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer(this.StringConexion!);  // Usar la cadena de conexión
-                optionsBuilder.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking); // Configurar el seguimiento de las consultas
+                optionsBuilder.UseSqlServer(this.StringConexion!);
+                optionsBuilder.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
             }
         }
 
-        // Definición de las entidades
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Cliente>()
+                .HasOne(c => c.UsuarioLogin)
+                .WithOne(ul => ul.Cliente)
+                .HasForeignKey<UsuarioLogin>(ul => ul.CedulaCliente);
+
+            modelBuilder.Entity<Membresia>()
+                .HasOne(m => m.Cliente)
+                .WithMany(c => c.Membresias)
+                .HasForeignKey(m => m.CedulaCliente);
+
+            modelBuilder.Entity<Membresia>()
+                .HasOne(m => m.Plan)
+                .WithMany(p => p.Membresias)
+                .HasForeignKey(m => m.NitPlan);
+
+            modelBuilder.Entity<Clase>()
+                .HasOne(c => c.Sede)
+                .WithMany(s => s.Clases)
+                .HasForeignKey(c => c.SedeId);
+
+            modelBuilder.Entity<Empleado>()
+                .HasOne(e => e.Sede)
+                .WithMany(s => s.Empleados)
+                .HasForeignKey(e => e.SedeId);
+
+            modelBuilder.Entity<Asignado>()
+    .HasKey(a => new { a.CedulaCoach, a.IdClase });
+
+            modelBuilder.Entity<Asignado>()
+                .HasOne(a => a.Coach)
+                .WithMany(c => c.Asignaciones)
+                .HasForeignKey(a => a.CedulaCoach);
+
+            modelBuilder.Entity<Asignado>()
+                .HasOne(a => a.Clase)
+                .WithMany(c => c.Asignaciones)
+                .HasForeignKey(a => a.IdClase);
+
+            modelBuilder.Entity<Feedback>()
+                .HasOne(f => f.Cliente)
+                .WithMany(c => c.Feedbacks)
+                .HasForeignKey(f => f.CedulaCliente);
+
+            modelBuilder.Entity<Feedback>()
+                .HasOne(f => f.Clase)
+                .WithMany(c => c.Feedbacks)
+                .HasForeignKey(f => f.IdClase);
+
+            modelBuilder.Entity<Asistencia>()
+            .HasKey(a => a.IdAsistencia);
+
+            modelBuilder.Entity<Asistencia>()
+                .HasOne(a => a.Cliente)
+                .WithMany(c => c.Asistencias)
+                .HasForeignKey(a => a.CedulaCliente);
+
+            modelBuilder.Entity<Asistencia>()
+                .HasOne(a => a.Clase)
+                .WithMany(c => c.Asistencias)
+                .HasForeignKey(a => a.IdClase);
+
+            modelBuilder.Entity<Reserva>()
+                .HasOne(r => r.Cliente)
+                .WithMany(c => c.Reservas)
+                .HasForeignKey(r => r.CedulaCliente);
+
+            modelBuilder.Entity<Reserva>()
+                .HasOne(r => r.Clase)
+                .WithMany(c => c.Reservas)
+                .HasForeignKey(r => r.IdClase);
+
+            modelBuilder.Entity<Pago>()
+                .HasOne(p => p.Cliente)
+                .WithMany(c => c.Pagos)
+                .HasForeignKey(p => p.CedulaCliente);
+
+            modelBuilder.Entity<DatosFisicos>()
+                .HasOne(df => df.Cliente)
+                .WithMany(c => c.DatosFisicos)
+                .HasForeignKey(df => df.CedulaCliente);
+
+            modelBuilder.Entity<HistorialFisico>()
+                .HasOne(hf => hf.Cliente)
+                .WithMany(c => c.HistorialFisicos)
+                .HasForeignKey(hf => hf.CedulaCliente);
+
+            base.OnModelCreating(modelBuilder);
+        }
+
         public DbSet<Cliente>? Clientes { get; set; }
         public DbSet<Clase>? Clases { get; set; }
-        public DbSet<Coach>? Coachs { get; set; }
+        public DbSet<Coach>? Coaches { get; set; }
         public DbSet<Membresia>? Membresias { get; set; }
         public DbSet<Plan>? Planes { get; set; }
         public DbSet<Reserva>? Reservas { get; set; }
@@ -38,8 +125,5 @@ namespace lib__repositorios.Implementaciones
         public DbSet<DatosFisicos>? DatosFisicos { get; set; }
         public DbSet<Pago>? Pagos { get; set; }
         public DbSet<UsuarioLogin>? UsuariosLogin { get; set; }
-
-        // Método para acceder a las entradas de las entidades
-        public EntityEntry<T> Entry<T>(T entity) where T : class => base.Entry(entity);
     }
 }

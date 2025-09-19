@@ -1,12 +1,13 @@
 ﻿using lib__dominio.Nucleo;
 using Newtonsoft.Json;
+using lib__repositorios.Implementaciones;   
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace gim_rat.Tests.Nucleo
+namespace ut_presentacion.Nucleo
 {
     public class Configuracion
     {
