@@ -3,11 +3,13 @@ using Microsoft.EntityFrameworkCore;
 using lib__repositorios.Interfaces;
 using lib__repositorios.Implementaciones;
 using gim_rat.Tests.Nucleo;
+using Xunit;
+
 namespace gim_rat.Tests.Entidades
 {
-    [TestClass]
     public class ClienteTests
     {
+        [Fact]
         public void Cliente_Properties_CanBeSetAndGet()
         {
             // Arrange
@@ -32,54 +34,16 @@ namespace gim_rat.Tests.Entidades
             cliente2.Activo = activo;
 
             // Assert
-
-            [TestMethod]
-            public void Ejecutar()
-            {
-                Assert.AreEqual(cedula, cliente1.Cedula);
-                Assert.AreEqual(cedula, cliente2.Cedula);
-                Assert.AreEqual(nombre, cliente1.Nombre);
-                Assert.AreEqual(nombre, cliente2.Nombre);
-                Assert.AreEqual(email, cliente1.Email);
-                Assert.AreEqual(email, cliente2.Email);
-                Assert.AreEqual(tipoUsuario, cliente1.TipoUsuario);
-                Assert.AreEqual(tipoUsuario, cliente2.TipoUsuario);
-                Assert.AreEqual(activo, cliente1.Activo);
-                Assert.AreEqual(activo, cliente2.Activo);
-            }
-            public bool Listar()
-        {
-            this.lista = this.iConexion!.Notas!.ToList();
-            return lista.Count > 0;
+            Assert.Equal(cedula, cliente1.Cedula);
+            Assert.Equal(cedula, cliente2.Cedula);
+            Assert.Equal(nombre, cliente1.Nombre);
+            Assert.Equal(nombre, cliente2.Nombre);
+            Assert.Equal(email, cliente1.Email);
+            Assert.Equal(email, cliente2.Email);
+            Assert.Equal(tipoUsuario, cliente1.TipoUsuario);
+            Assert.Equal(tipoUsuario, cliente2.TipoUsuario);
+            Assert.Equal(activo, cliente1.Activo);
+            Assert.Equal(activo, cliente2.Activo);
         }
-        public bool Guardar()
-        {
-            this.entidad = EntidadesNucleo.Notas()!;
-            this.iConexion!.Notas!.Add(this.entidad);
-            this.iConexion!.SaveChanges();
-            return true;
-        }
-        public bool Modificar()
-        {
-            this.entidad!.NotaFinal =
-            (this.entidad.Nota1 +
-            this.entidad.Nota2 +
-            this.entidad.Nota3 +
-            this.entidad.Nota4 +
-            this.entidad.Nota5) / 5;
-            var entry = this.iConexion!.Entry<Notas>(this.entidad);
-            entry.State = EntityState.Modified;
-            this.iConexion!.SaveChanges();
-            return true;
-        }
-        public bool Borrar()
-        {
-            this.iConexion!.Notas!.Remove(this.entidad!);
-            this.iConexion!.SaveChanges();
-            return true;
-        }
-
     }
-
-}
 }

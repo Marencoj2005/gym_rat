@@ -2,7 +2,7 @@ using Xunit;
 using Moq;
 using lib__dominio.Entidades;
 using lib__repositorios.Interfaces;
-using lib__repositorios.Implementaciones;
+using lib_aplicaciones;
 using Microsoft.EntityFrameworkCore;
 
 namespace gim_rat.Tests.Repositorios

@@ -11,7 +11,17 @@ namespace gim_rat.Tests.Entidades
     [TestClass]
     public class ClienteTests
     {
-        private IConexion _conexion;
+        private IConexion _conexion = null!;
+
+        [TestInitialize]
+        public void TestInitialize()
+        {
+            var options = new DbContextOptionsBuilder<Conexion>()
+                .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
+                .Options;
+
+            _conexion = new Conexion(options);
+        }
 
         [TestMethod]
         public void Cliente_Properties_CanBeSetAndGet()
@@ -64,7 +74,7 @@ namespace gim_rat.Tests.Entidades
         [TestMethod]
         public void Listar_Clientes()
         {
-            // Arrange: Añadir un cliente a la base de datos
+            // Arrange: Aï¿½adir un cliente a la base de datos
             var cliente = new Cliente { Cedula = 12345, Nombre = "Juan Perez" };
             _conexion.Clientes.Add(cliente);
             _conexion.SaveChanges();
@@ -86,7 +96,7 @@ namespace gim_rat.Tests.Entidades
             _conexion.Clientes.Add(cliente);
             _conexion.SaveChanges();
 
-            // Assert: Verificar que el cliente se guardó correctamente
+            // Assert: Verificar que el cliente se guardï¿½ correctamente
             var clienteGuardado = _conexion.Clientes.FirstOrDefault(c => c.Cedula == 67890);
             Assert.IsNotNull(clienteGuardado);
             Assert.AreEqual("Maria Lopez", clienteGuardado.Nombre);
@@ -106,7 +116,7 @@ namespace gim_rat.Tests.Entidades
             entry.State = EntityState.Modified;
             _conexion.SaveChanges();
 
-            // Assert: Verificar que el nombre se actualizó
+            // Assert: Verificar que el nombre se actualizï¿½
             var clienteModificado = _conexion.Clientes.FirstOrDefault(c => c.Cedula == 67890);
             Assert.IsNotNull(clienteModificado);
             Assert.AreEqual("Carlos Fernandez", clienteModificado.Nombre);
