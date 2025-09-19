@@ -1,7 +1,10 @@
-﻿namespace lib__dominio.Entidades
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace lib__dominio.Entidades
 {
     public class Feedback
     {
+        [Key]
         public int IdFeedback { get; set; }
         public int CedulaCliente { get; set; }
         public int IdClase { get; set; }

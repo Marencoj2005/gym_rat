@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,7 @@ namespace lib__dominio.Entidades
 {
     public class Sede
     {
+        [Key]
         public int IdSede { get; set; }
         public String? Nombre { get; set; }
         public String? Ubicacion { get; set; }

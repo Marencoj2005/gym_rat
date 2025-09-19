@@ -1,9 +1,12 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace lib__dominio.Entidades
 {
     public class DatosFisicos
     {
+
+        [Key]
         public int Id { get; set; }
         public int CedulaCliente { get; set; }
         public DateTime FechaRegistro { get; set; }

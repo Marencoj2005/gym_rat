@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,7 @@ namespace lib__dominio.Entidades
 {
     public class Clase
     {
+        [Key]
         public int IdClase { get; set; }
         public String? NombreClase { get; set; }
         public TimeSpan Horario { get; set; }
@@ -16,7 +18,6 @@ namespace lib__dominio.Entidades
 
         public Sede Sede { get; set; }
         public ICollection<Asignado> Asignaciones { get; set; }
-       // public ICollection<Reserva> Reservas { get; set; }
         public ICollection<Asistencia> Asistencias { get; set; }
         public ICollection<Reserva> Reservas { get; set; }
         public ICollection<Feedback> Feedbacks { get; set; }
